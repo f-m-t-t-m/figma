@@ -1,0 +1,248 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Большой театр</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <aside>
+        <div class="sticky">
+            <div class="aside-text">Контактная информация</div>
+            <div class="line"></div>
+            <div class="links">
+                <img src="{% static 'img/insta.png' %}">
+                <img src="{% static 'img/facebook.png' %}" height="26px" width="15px">
+                <img src="{% static 'img/vk.png' %}">
+                <img src="{% static 'img/youtube.png' %}">
+            </div>
+        </div>
+    </aside>
+
+    <header class="header">
+        <div class="container">
+            <nav>
+                <ul class="top_nav">
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">О театре</a></li>
+                    <li><a href="#">Наши постановки</a></li>
+                    <li><a href="#">Партнеры театра</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+                <span class="phone">+7 495 123-45-67</span>
+            </nav>
+            <div class="header_info">
+                <div class="desc">
+                    <h1>Большой театр</h1>
+                    <p class="desc_inner">
+                        Большо́й теа́тр — петербургский театр, существовавший в 1784—1886 годах,
+                        с 1886 года — Петербургская консерватория. Первое постоянное в Санкт-Петербурге,
+                        крупнейшее в России и одно из крупнейших театральных зданий в Европе XVIII.
+                    </p>
+                    <p class="btn">Афиша</p>
+                </div>
+                <div class="wrap">
+                    <div>
+                        <div class="slide">
+                            <img src="{% static 'img/poster1.png' %}" class="img">
+                            <img src="{% static 'img/poster1.png' %}" class="img_shadow">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="slide">
+                            <img src="{% static 'img/poster2.jpg' %}" class="img">
+                            <img src="{% static 'img/poster2.jpg' %}" class="img_shadow">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="slide">
+                            <img src="{% static 'img/poster3.jpg' %}" class="img">
+                            <img src="{% static 'img/poster3.jpg' %}" class="img_shadow">
+                            <div class="overlay"></div>
+                        </div>
+                    </div>
+                    <div class="slider_nav">
+                        <span class="slider_btn" onclick="prev()">
+                            <img src="{% static 'img/back_grey.png' %}" white="{% static 'img/back_white.png' %}" grey="{% static 'img/back_grey.png' %}" id="back">
+                            Пред</span>
+                        <span class="slider_btn" onclick="next()">След
+                            <img src="{% static 'img/forward_white.png' %}" white="{% static 'img/forward_white.png' %}" grey="{% static 'img/forward_grey.png' %}" id="forward">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <article>
+        <section class="container">
+            <div class="about">
+                <h2><span>О</span> театре</h2>
+                <div class="flex-about">
+                    <div class="desc2">
+                    <h3>Самый лучший театр СПБ</h3>
+                    <p class="desc_inner">
+                        Как свидетельствуют архивные документы, первое каменное здание
+                        Большого театра начали возводить в 1775 году по проекту Антонио Ринальди.
+                        В дальнейшем, после того как Ринальди упал с лесов и не мог лично наблюдать
+                        за ходом работ, Екатерина II поручила немецкому театральному декоратору и
+                        архитектору Людвигу Филиппу Тишбейну создать новый проект театра, который
+                        и был воплощён архитекторами Ф. В. фон Бауром и М. А. Деденёвым.
+                        Открытие его состоялось в 1783 году, хотя, основываясь на других свидетельствах,
+                        годом открытия можно считать 1784 год.
+                    </p>
+                </div>
+                    <div class="stat">
+                        <h3>немного о цифрах</h3>
+                        <img src="{% static 'img/chair.png' %}">
+                        <p class="stat_text"><span class="stat_num">1600</span> посадочный мест</p>
+                        <img src="{% static 'img/theater.png' %}">
+                        <p class="stat_text"><span class="stat_num">350</span> лет истории</p>
+                    </div>
+                    <img src="{% static 'img/theatre2.png' %}">
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2><span>Наши</span> постановки</h2>
+            <div class="slide-container">
+                <div class="image_slider swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="text-image">
+                                <img src="{% static 'img/slide1.png' %}">
+                                <div class="top-left">Оскар 2020</div>
+                                <div class="bot-left">Сентябрь 2020</div>
+                                <img src="{% static 'img/zoom1.png' %}" class="center">
+                                <img src="{% static 'img/zoom2.png' %}" class="center">
+                            </div>
+                        </div>
+                        <div class="swiper-slide text-image">
+                            <div class="text-image">
+                                <img src="{% static 'img/slide2.png' %}">
+                                <div class="top-left">Золотой грамофон</div>
+                                <div class="bot-left">Июль 2020</div>
+                                <img src="{% static 'img/zoom1.png' %}" class="center">
+                                <img src="{% static 'img/zoom2.png' %}" class="center">
+                            </div>
+                        </div>
+                        <div class="swiper-slide text-image">
+                            <div class="text-image">
+                                <img src="{% static 'img/slide3.png' %}">
+                                <div class="top-left">Золотой грамофон</div>
+                                <div class="bot-left">Июль 2020</div>
+                                <img src="{% static 'img/zoom1.png' %}" class="center">
+                                <img src="{% static 'img/zoom2.png' %}" class="center">
+                            </div>
+                        </div>
+                        <div class="swiper-slide text-image">
+                            <div class="text-image">
+                                <img src="{% static 'img/slide4.png' %}">
+                                <div class="top-left">Щелкунчик</div>
+                                <div class="bot-left">Май 2020</div>
+                                <img src="{% static 'img/zoom1.png' %}" class="center">
+                                <img src="{% static 'img/zoom2.png' %}" class="center">
+                            </div>
+                        </div>
+                       <div class="swiper-slide">
+                            <div class="text-image">
+                                <img src="{% static 'img/slide1.png' %}">
+                                <div class="top-left">Оскар 2020</div>
+                                <div class="bot-left">Сентябрь 2020</div>
+                                <img src="{% static 'img/zoom1.png' %}" class="center">
+                                <img src="{% static 'img/zoom2.png' %}" class="center">
+                            </div>
+                        </div>
+                        <div class="swiper-slide text-image">
+                            <div class="text-image">
+                                <img src="{% static 'img/slide2.png' %}">
+                                <div class="top-left">Золотой грамофон</div>
+                                <div class="bot-left">Июль 2020</div>
+                                <img src="{% static 'img/zoom1.png' %}" class="center">
+                                <img src="{% static 'img/zoom2.png' %}" class="center">
+                            </div>
+                        </div>
+                        <div class="swiper-slide text-image">
+                            <div class="text-image">
+                                <img src="{% static 'img/slide3.png' %}">
+                                <div class="top-left">Золотой грамофон</div>
+                                <div class="bot-left">Июль 2020</div>
+                                <img src="{% static 'img/zoom1.png' %}" class="center">
+                                <img src="{% static 'img/zoom2.png' %}" class="center">
+                            </div>
+                        </div>
+                        <div class="swiper-slide text-image">
+                            <div class="text-image">
+                                <img src="{% static 'img/slide4.png' %}">
+                                <div class="top-left">Щелкунчик</div>
+                                <div class="bot-left">Май 2020</div>
+                                <img src="{% static 'img/zoom1.png' %}" class="center">
+                                <img src="{% static 'img/zoom2.png' %}" class="center">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container rating">
+            <img src="{% static 'img/rating.png' %}">
+        </section>
+        <section class="container">
+            <h2><span>Партнеры</span> театра</h2>
+            <div class="row">
+                <img src="{% static 'img/gazprom.png' %}">
+                <img src="{% static 'img/gazprom.png' %}">
+                <img src="{% static 'img/gazprom.png' %}">
+                <img src="{% static 'img/gazprom.png' %}">
+            </div>
+            <div class="row">
+                <img src="{% static 'img/gazprom.png' %}">
+                <img src="{% static 'img/gazprom.png' %}">
+                <img src="{% static 'img/gazprom.png' %}">
+                <img src="{% static 'img/gazprom.png' %}">
+            </div>
+        </section>
+        <section class="container contacts">
+            <h2><span>Стать</span> меценатом</h2>
+            <div class="flex-contacts">
+                <div class="address">
+                    <p>+7 (812) 123-45-55</p>
+                    <p>+7 (812) 123-45-66</p>
+                    <p>info@theater.ru</p>
+                    <p>г. санкт-петербург, невский 140</p>
+                </div>
+                <div style="max-width: 730px">
+                    <form method="POST" class="form" id="form-main">
+                        {% csrf_token %}
+                        {{ form.name }}
+                        {{ form.company }}
+                        {{ form.phone }}
+                        {{ form.mail }}
+                        {{ form.message }}
+                    </form>
+                    <div class="lower-flex">
+                        <div class="lower">
+                            * Ваши данные не будут переданы третьим лицам, 100% вероятность.
+                            Конфиденциальность мы гарантируем, и защищаем персональные данные
+                            согласно законку ФЗ-52.
+                        </div>
+                        <button class="btn" type="submit" form="form-main">Отправить</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+
+    <footer>
+        <div class="container border">
+            <p>(с) Все права защищены. Большой театр. 2020</p>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="{% static 'js/first_slider.js' %}"></script>
+    <script src="{% static 'js/second_slider.js' %}"></script>
+</body>
+</html>
