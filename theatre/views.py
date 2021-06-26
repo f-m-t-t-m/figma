@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from theatre.forms import *
 
 
@@ -9,6 +9,7 @@ def theatre(request):
         if form.is_valid():
             print('saved')
             form.save()
+            return redirect('/')
 
     data = {
         'form': form,
